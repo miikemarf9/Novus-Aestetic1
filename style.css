@@ -8,18 +8,18 @@
 }
  
 :root {
-    --ink: #1a1a1a;
-    --stone: #f7ecea;       /* warm blush-stone */
-    --cream: #fdf8f6;       /* warm ivory */
+    --ink: #2b2b2b;
+    --stone: #faf4f2;       /* very light warm blush */
+    --cream: #fffdfc;       /* near-white warm ivory */
     --accent: #a98c6b;      /* warm gold-taupe */
     --accent-dark: #8c7255;
     --blush: #d9a0a0;       /* soft beauty pink */
     --blush-dark: #c07d7d;
-    --teal: #2aa38f;        /* vibrant pastel teal, echoes logo mark */
+    --teal: #2aa38f;
     --teal-dark: #1f8a7a;
-    --deep: #3a2a2c;        /* warm deep plum-brown, replaces stark black */
+    --deep: #5c4a4d;        /* lightened warm plum, much softer than before */
     --text-muted: #7a6a68;
-    --border-soft: #ecdfda;
+    --border-soft: #f0e6e1;
     --white: #ffffff;
 }
  
@@ -111,26 +111,9 @@ img {
 .logo-novus {
     font-family: 'Inter', sans-serif;
     font-weight: 800;
-    font-size: 1.3rem;
-    letter-spacing: 0.04em;
+    font-size: 1.25rem;
+    letter-spacing: 0.06em;
     color: var(--ink);
-    display: inline-flex;
-    align-items: center;
-}
- 
-.logo-o-wrap {
-    position: relative;
-    display: inline-block;
-}
- 
-.logo-o-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 0.62em;
-    height: 0.62em;
-    pointer-events: none;
 }
  
 .logo-aesthetics {
@@ -214,12 +197,13 @@ img {
 /* ============================= */
 .hero {
     position: relative;
-    padding: 130px 24px 110px;
-    text-align: left;
+    padding: 120px 24px 100px;
+    text-align: center;
     overflow: hidden;
-    min-height: 560px;
+    min-height: 520px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
  
 .hero-bg {
@@ -228,59 +212,43 @@ img {
     z-index: 0;
     background-image: url('hero-photo-novus-aestetics-flowers.jpg');
     background-size: cover;
-    background-position: center 20%;
+    background-position: center 25%;
 }
  
 .hero-bg::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(100deg, rgba(15,15,15,0.72) 0%, rgba(15,15,15,0.45) 45%, rgba(15,15,15,0.15) 70%, rgba(15,15,15,0.05) 100%);
+    background: rgba(253, 248, 246, 0.82);
 }
  
 .hero-motifs {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    pointer-events: none;
+    display: none;
 }
- 
-.motif {
-    position: absolute;
-    color: rgba(233, 210, 180, 0.55);
-}
- 
-.motif-1 { width: 26px; height: 26px; top: 14%; left: 62%; }
-.motif-2 { width: 18px; height: 18px; top: 68%; left: 58%; }
-.motif-3 { width: 34px; height: 34px; top: 40%; left: 82%; }
-.motif-4 { width: 14px; height: 14px; top: 24%; left: 90%; }
-.motif-5 { width: 20px; height: 20px; top: 78%; left: 88%; }
  
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 620px;
-    margin: 0;
+    max-width: 680px;
+    margin: 0 auto;
 }
  
 .hero-h1 {
     margin-bottom: 22px;
+    color: var(--ink);
 }
  
-.hero-content .eyebrow {
-    background: rgba(255,255,255,0.12);
-    color: #f0e4d3;
-    border: 1px solid rgba(233, 210, 180, 0.35);
-}
- 
-.hero-h1,
 .hero-sub {
-    color: var(--white);
+    color: var(--text-muted);
 }
  
 .hero-content .btn-outline {
-    border-color: rgba(255,255,255,0.55);
-    color: var(--white);
+    border-color: var(--ink);
+    color: var(--ink);
+}
+ 
+.hero-content .hero-btns {
+    justify-content: center;
 }
  
 .hero-content .hero-btns .btn-outline:first-child:hover {
@@ -290,9 +258,9 @@ img {
 }
  
 .hero-content .hero-btns .btn-outline:last-child:hover {
-    background: var(--white);
-    border-color: var(--white);
-    color: var(--ink);
+    background: var(--ink);
+    border-color: var(--ink);
+    color: var(--white);
 }
  
 .eyebrow {
@@ -425,14 +393,6 @@ img {
     height: 48px;
     margin: 0 auto 16px;
     color: var(--accent-dark);
-}
- 
-.trust-item:nth-child(2) .trust-icon {
-    color: var(--teal-dark);
-}
- 
-.trust-item:nth-child(4) .trust-icon {
-    color: var(--blush-dark);
 }
  
 .trust-icon svg {
