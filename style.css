@@ -87,7 +87,7 @@ img {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: var(--white);
+    background: var(--stone);
     border-bottom: 1px solid var(--border-soft);
 }
  
@@ -97,31 +97,20 @@ img {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 18px 24px;
+    padding: 12px 24px;
 }
  
 .logo {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
     text-decoration: none;
     line-height: 1;
 }
  
-.logo-novus {
-    font-family: 'Inter', sans-serif;
-    font-weight: 800;
-    font-size: 1.25rem;
-    letter-spacing: 0.06em;
-    color: var(--ink);
-}
- 
-.logo-aesthetics {
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 0.95rem;
-    letter-spacing: 0.14em;
-    color: var(--accent);
+.logo-img {
+    height: 48px;
+    width: auto;
+    display: block;
 }
  
 .primary-nav {
@@ -886,5 +875,4 @@ img {
         padding: 8px;
     }
 }
- 
  
