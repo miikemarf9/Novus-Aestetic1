@@ -1,3 +1,4 @@
+
 /* ============================= */
 /* RESET & BASE */
 /* ============================= */
@@ -198,57 +199,51 @@ img {
 .hero {
     position: relative;
     padding: 120px 24px 100px;
-    text-align: center;
+    text-align: left;
     overflow: hidden;
-    min-height: 520px;
+    min-height: 540px;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
  
 .hero-bg {
     position: absolute;
     inset: 0;
     z-index: 0;
-    background-image: url('hero-photo-novus-aestetics-flowers.jpg');
+    background-image: url('lip-model-novus-aestetics.jpg');
     background-size: cover;
-    background-position: center 25%;
+    background-position: left 30%;
 }
  
 .hero-bg::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(253, 248, 246, 0.82);
-}
- 
-.hero-motifs {
-    display: none;
+    background: linear-gradient(95deg, rgba(255,253,252,0.15) 0%, rgba(255,253,252,0.55) 40%, rgba(255,253,252,0.92) 68%, rgba(255,253,252,0.97) 100%);
 }
  
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 680px;
-    margin: 0 auto;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: 6%;
 }
  
 .hero-h1 {
     margin-bottom: 22px;
     color: var(--ink);
+    font-size: 3.2rem;
 }
  
 .hero-sub {
-    color: var(--text-muted);
+    color: #5f5350;
 }
  
 .hero-content .btn-outline {
     border-color: var(--ink);
     color: var(--ink);
-}
- 
-.hero-content .hero-btns {
-    justify-content: center;
+    background: rgba(255,255,255,0.55);
 }
  
 .hero-content .hero-btns .btn-outline:first-child:hover {
@@ -769,6 +764,97 @@ img {
 }
  
 /* ============================= */
+/* MENU CLOSE BUTTON */
+/* ============================= */
+.menu-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--border-soft);
+    background: var(--stone);
+    color: var(--ink);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
+.menu-close svg {
+    width: 20px;
+    height: 20px;
+}
+ 
+/* ============================= */
+/* WHATSAPP FLOAT */
+/* ============================= */
+.whatsapp-float {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    z-index: 900;
+    display: flex;
+    align-items: center;
+}
+ 
+.whatsapp-float.hidden {
+    display: none;
+}
+ 
+.whatsapp-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--white);
+    border: 1px solid var(--border-soft);
+    border-radius: 30px;
+    padding: 8px 16px 8px 8px;
+    text-decoration: none;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.14);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+ 
+.whatsapp-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+}
+ 
+.whatsapp-btn svg {
+    width: 34px;
+    height: 34px;
+}
+ 
+.whatsapp-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--ink);
+}
+ 
+.whatsapp-dismiss {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0,0,0,0.45);
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: -8px;
+    margin-top: -34px;
+    z-index: 2;
+    position: relative;
+}
+ 
+.whatsapp-dismiss svg {
+    width: 10px;
+    height: 10px;
+}
+ 
+/* ============================= */
 /* RESPONSIVE */
 /* ============================= */
 @media (max-width: 860px) {
@@ -781,15 +867,42 @@ img {
     }
  
     .hero {
-        padding: 70px 20px 60px;
+        padding: 80px 20px 70px;
+        min-height: 480px;
+        text-align: center;
+    }
+ 
+    .hero-bg {
+        background-position: 28% 20%;
+    }
+ 
+    .hero-bg::after {
+        background: rgba(255,253,252,0.85);
+    }
+ 
+    .hero-content {
+        margin: 0 auto;
+        max-width: 100%;
     }
  
     .hero-h1 {
-        font-size: 2.1rem;
+        font-size: 2.2rem;
+    }
+ 
+    .hero-content .hero-btns {
+        justify-content: center;
     }
  
     .about-grid {
         grid-template-columns: 1fr;
+    }
+ 
+    .whatsapp-label {
+        display: none;
+    }
+ 
+    .whatsapp-btn {
+        padding: 8px;
     }
 }
  
