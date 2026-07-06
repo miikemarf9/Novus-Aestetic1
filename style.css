@@ -246,15 +246,9 @@ img {
     background: rgba(255,255,255,0.55);
 }
  
-.hero-content .hero-btns .btn-outline:first-child:hover {
+.hero-content .hero-btns .btn-outline:hover {
     background: var(--accent);
     border-color: var(--accent);
-    color: var(--white);
-}
- 
-.hero-content .hero-btns .btn-outline:last-child:hover {
-    background: var(--ink);
-    border-color: var(--ink);
     color: var(--white);
 }
  
