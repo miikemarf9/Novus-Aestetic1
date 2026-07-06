@@ -75,6 +75,11 @@
  
     <!-- Mobile Slide-in Menu -->
     <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile Navigation">
+        <button class="menu-close" id="menu-close" aria-label="Close menu">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </button>
         <a href="index.html" class="mob-link">Home</a>
         <a href="index.html#treatments" class="mob-link">Treatments</a>
         <a href="video.html" class="mob-link">Video Gallery</a>
@@ -90,8 +95,8 @@
         <section class="hero" aria-label="Hero Section">
             <div class="hero-bg"></div>
             <div class="hero-content">
-                <h1 class="hero-h1">Advanced Aesthetic Treatments.<br>Safely Delivered.</h1>
-                <p class="hero-sub">Medical-grade Botox, lip fillers, and advanced aesthetic care — delivered with clinical precision and a natural-results philosophy.</p>
+                <h1 class="hero-h1">Enhance What's<br>Already Beautiful.</h1>
+                <p class="hero-sub">Medical-grade anti-wrinkle, lip filler and advanced skin treatments — delivered with clinical precision, and results that only ever look like you.</p>
                 <div class="hero-btns">
                     <a href="book.html" class="btn-outline">Book a Consultation</a>
                     <a href="#treatments" class="btn-outline">View Treatments</a>
@@ -294,6 +299,22 @@
  
     </main>
  
+    <!-- WhatsApp Floating Chat Button -->
+    <div class="whatsapp-float" id="whatsapp-float">
+        <button class="whatsapp-dismiss" id="whatsapp-dismiss" aria-label="Hide WhatsApp button">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </button>
+        <a href="https://wa.me/447742267151" target="_blank" rel="noopener" class="whatsapp-btn" aria-label="Chat with us on WhatsApp">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 3C9.373 3 4 8.373 4 15c0 2.25.62 4.354 1.699 6.153L4 29l8.063-1.657A11.94 11.94 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3z" fill="#25D366"/>
+                <path d="M12.505 9.641c-.26-.579-.534-.591-.782-.601-.202-.009-.434-.008-.665-.008-.231 0-.607.087-.925.434-.318.348-1.214 1.187-1.214 2.895 0 1.708 1.243 3.358 1.416 3.59.174.231 2.4 3.844 5.925 5.234 2.93 1.155 3.526.925 4.162.867.637-.058 2.054-.84 2.343-1.65.29-.81.29-1.505.203-1.65-.087-.145-.318-.232-.665-.406-.348-.173-2.054-1.013-2.372-1.129-.318-.116-.55-.173-.781.174-.232.347-.897 1.129-1.1 1.36-.202.232-.405.26-.752.087-.348-.174-1.466-.54-2.792-1.723-1.032-.92-1.729-2.057-1.931-2.404-.203-.348-.022-.536.152-.709.156-.155.348-.405.521-.608.174-.202.232-.347.348-.578.115-.232.058-.434-.03-.608-.086-.174-.762-1.891-1.07-2.577z" fill="#fff"/>
+            </svg>
+            <span class="whatsapp-label">Chat with us</span>
+        </a>
+    </div>
+ 
     <!-- ============================= -->
     <!-- FOOTER -->
     <!-- ============================= -->
@@ -323,7 +344,15 @@
     <script>
         const hamburger = document.getElementById('hamburger');
         const mobileMenu = document.getElementById('mobile-menu');
+        const menuClose = document.getElementById('menu-close');
         const mobLinks = mobileMenu.querySelectorAll('.mob-link');
+ 
+        function closeMenu() {
+            mobileMenu.classList.remove('open');
+            hamburger.classList.remove('open');
+            hamburger.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        }
  
         hamburger.addEventListener('click', () => {
             const isOpen = mobileMenu.classList.toggle('open');
@@ -332,13 +361,18 @@
             document.body.style.overflow = isOpen ? 'hidden' : '';
         });
  
+        menuClose.addEventListener('click', closeMenu);
+ 
         mobLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('open');
-                hamburger.classList.remove('open');
-                hamburger.setAttribute('aria-expanded', 'false');
-                document.body.style.overflow = '';
-            });
+            link.addEventListener('click', closeMenu);
+        });
+ 
+        // WhatsApp float dismiss
+        const whatsappFloat = document.getElementById('whatsapp-float');
+        const whatsappDismiss = document.getElementById('whatsapp-dismiss');
+ 
+        whatsappDismiss.addEventListener('click', () => {
+            whatsappFloat.classList.add('hidden');
         });
  
         document.querySelectorAll('.faq-toggle').forEach(toggle => {
