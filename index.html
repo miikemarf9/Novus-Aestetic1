@@ -163,19 +163,31 @@
                     <h3>Anti-Wrinkle Injections</h3>
                     <p>A subtle, refreshed appearance — softening fine lines and wrinkles with precise, medical-grade injectable treatments.</p>
                     <p class="service-price">From £150</p>
-                    <a href="book.html" class="service-link">Learn More →</a>
+                    <div class="service-more">
+                        <p>Anti-wrinkle injections gently relax the muscles responsible for expression lines across the forehead, frown and around the eyes. The result is a smoother, well-rested look that still moves and feels like you — never frozen.</p>
+                        <p>Every treatment begins with a full consultation and facial assessment to make sure it's suitable and tailored to your features. Results typically develop over two weeks and last around three to four months.</p>
+                    </div>
+                    <button class="service-toggle" aria-expanded="false">Learn More <span>+</span></button>
                 </div>
                 <div class="service-card">
                     <h3>Premium Dermal Fillers</h3>
                     <p>Natural volume, definition, and structural balance — tailored to complement your unique features.</p>
                     <p class="service-price">From £220</p>
-                    <a href="book.html" class="service-link">Learn More →</a>
+                    <div class="service-more">
+                        <p>Dermal fillers restore lost volume and enhance natural structure across the lips, cheeks, chin, jawline and more. Using premium, medical-grade products, treatment is designed to balance and refine your features rather than change them.</p>
+                        <p>Each plan is bespoke and discussed thoroughly at consultation, with an honest assessment of what will achieve the most natural, harmonious result for you.</p>
+                    </div>
+                    <button class="service-toggle" aria-expanded="false">Learn More <span>+</span></button>
                 </div>
                 <div class="service-card">
                     <h3>Advanced Aesthetics Consultation</h3>
                     <p>Your gateway to a custom, medical-grade skin plan — designed entirely around your goals.</p>
                     <p class="service-price">From £50</p>
-                    <a href="book.html" class="service-link">Learn More →</a>
+                    <div class="service-more">
+                        <p>Not sure where to start? A dedicated consultation is the ideal first step. Alana will carry out a full facial assessment, discuss your goals and medical history, and talk you honestly through the most suitable options.</p>
+                        <p>You'll leave with a clear, personalised treatment plan and professional advice — with no pressure and no obligation to proceed.</p>
+                    </div>
+                    <button class="service-toggle" aria-expanded="false">Learn More <span>+</span></button>
                 </div>
             </div>
         </section>
@@ -377,6 +389,24 @@
         document.querySelectorAll('.faq-toggle').forEach(toggle => {
             toggle.addEventListener('click', () => {
                 const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('span');
+                const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+                if (isExpanded) {
+                    content.style.maxHeight = null;
+                    icon.textContent = '+';
+                    toggle.setAttribute('aria-expanded', 'false');
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    icon.textContent = '−';
+                    toggle.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+ 
+        // Service card "Learn More" toggles
+        document.querySelectorAll('.service-toggle').forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.previousElementSibling;
                 const icon = toggle.querySelector('span');
                 const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
                 if (isExpanded) {
