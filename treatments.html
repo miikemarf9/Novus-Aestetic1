@@ -298,6 +298,14 @@
             whatsappFloat.classList.add('hidden');
         });
  
+        // Frosted header on scroll
+        const siteHeader = document.querySelector('.site-header');
+        function updateHeaderFrost() {
+            siteHeader.classList.toggle('scrolled', window.scrollY > 40);
+        }
+        window.addEventListener('scroll', updateHeaderFrost, { passive: true });
+        updateHeaderFrost();
+ 
         // Scroll-reveal for journey steps (replays on scroll up/down)
         const journeySteps = document.querySelectorAll('.journey-step');
         if ('IntersectionObserver' in window && journeySteps.length) {
