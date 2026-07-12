@@ -266,6 +266,14 @@
             whatsappFloat.classList.add('hidden');
         });
  
+        // Frosted header on scroll
+        const siteHeader = document.querySelector('.site-header');
+        function updateHeaderFrost() {
+            siteHeader.classList.toggle('scrolled', window.scrollY > 40);
+        }
+        window.addEventListener('scroll', updateHeaderFrost, { passive: true });
+        updateHeaderFrost();
+ 
         // ===== Video Gallery Logic =====
         const VISIBLE_STEP = 4;
         const grid = document.getElementById('video-grid');
