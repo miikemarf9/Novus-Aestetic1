@@ -386,6 +386,14 @@
             whatsappFloat.classList.add('hidden');
         });
  
+        // Frosted header on scroll
+        const siteHeader = document.querySelector('.site-header');
+        function updateHeaderFrost() {
+            siteHeader.classList.toggle('scrolled', window.scrollY > 40);
+        }
+        window.addEventListener('scroll', updateHeaderFrost, { passive: true });
+        updateHeaderFrost();
+ 
         document.querySelectorAll('.faq-toggle').forEach(toggle => {
             toggle.addEventListener('click', () => {
                 const content = toggle.nextElementSibling;
