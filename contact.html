@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
  
-    <title>Contact | Book Your Consultation | Novus Aesthetics Ashford, Kent</title>
-    <meta name="description" content="Get in touch with Novus Aesthetics in Ashford, Kent. Send a message to book your consultation for Botox, fillers and advanced skin treatments with a Registered Nurse.">
-    <meta name="keywords" content="contact Novus Aesthetics, aesthetic clinic Ashford contact, book consultation Kent, Novus Aesthetics Kennington">
+    <title>Video Gallery | Educational & Results | Novus Aesthetics Ashford</title>
+    <meta name="description" content="Watch educational videos, treatment insights and real results from Novus Aesthetics in Ashford, Kent. Aesthetic treatments delivered by a Registered Nurse.">
+    <meta name="keywords" content="aesthetic treatment videos, botox results Kent, filler before after Ashford, Novus Aesthetics videos">
     <meta name="author" content="Novus Aesthetics">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
  
-    <link rel="canonical" href="https://novusaesthetics.co.uk/contact.html">
+    <link rel="canonical" href="https://novusaesthetics.co.uk/video.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  
@@ -30,7 +30,6 @@
       "name": "Novus Aesthetics",
       "image": "https://novusaesthetics.co.uk/novus-logo.svg",
       "url": "https://novusaesthetics.co.uk",
-      "email": "info@novusaesthetics.co.uk",
       "areaServed": {
         "@type": "Place",
         "name": "Kennington, Ashford, Kent"
@@ -92,101 +91,105 @@
         <!-- ============================= -->
         <!-- PAGE HEADER -->
         <!-- ============================= -->
-        <section class="page-header" aria-label="Contact Introduction">
+        <section class="page-header" aria-label="Video Gallery Introduction">
             <div class="page-header-inner">
-                <span class="eyebrow">Get In Touch</span>
-                <h1>Contact Novus Aesthetics</h1>
-                <p>Have a question or ready to book your consultation? Send us a message using the form below and we'll get back to you as soon as possible.</p>
+                <span class="eyebrow">Video Gallery</span>
+                <h1>Education. Transparency. Real Results.</h1>
+                <p>Explore educational content, treatment insights and real results. Every video reflects our commitment to safe, honest and evidence-based aesthetic care.</p>
             </div>
         </section>
  
         <!-- ============================= -->
-        <!-- CONTACT SECTION -->
+        <!-- VIDEO GALLERY -->
         <!-- ============================= -->
-        <section class="contact-section" aria-label="Contact Form and Details">
-            <div class="contact-grid">
+        <section class="video-gallery" aria-label="Video Gallery">
  
-                <!-- Contact Form -->
-                <div class="contact-form-wrap">
-                    <h2>Send Us a Message</h2>
-                    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" autocomplete="name">
-                        </div>
+            <!-- Category Filter -->
+            <div class="video-filter" role="tablist" aria-label="Filter videos by category">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="educational">Educational</button>
+                <button class="filter-btn" data-filter="before-after">Before &amp; After</button>
+                <button class="filter-btn" data-filter="client-stories">Client Stories</button>
+            </div>
  
-                        <div class="form-group">
-                            <label for="phone">Phone Number <span class="req">*</span></label>
-                            <input type="tel" id="phone" name="phone" required autocomplete="tel">
-                        </div>
+            <!--
+                ==========================================================
+                HOW TO ADD A VIDEO (easy - copy one block below):
+                1. Copy an entire <article class="video-card"> ... </article> block
+                2. Paste it at the TOP of the grid to make it the newest video
+                3. Change data-category to: educational, before-after, or client-stories
+                4. Change the YouTube ID in TWO places:
+                   - data-video="YOUTUBE_ID"
+                   - the thumbnail img src (https://img.youtube.com/vi/YOUTUBE_ID/hqdefault.jpg)
+                5. Change the <h3> title and <p> caption
+                The YouTube ID is the part after "watch?v=" in the video URL.
+                e.g. youtube.com/watch?v=dQw4w9WgXcQ  ->  ID is dQw4w9WgXcQ
+                ==========================================================
+            -->
+            <div class="video-grid" id="video-grid">
  
-                        <div class="form-group">
-                            <label for="email">Email Address <span class="req">*</span></label>
-                            <input type="email" id="email" name="email" required autocomplete="email">
-                        </div>
- 
-                        <div class="form-group">
-                            <label for="subject">Subject <span class="req">*</span></label>
-                            <select id="subject" name="subject" required>
-                                <option value="" disabled selected>Please choose an option…</option>
-                                <option value="Book a Consultation">Book a Consultation</option>
-                                <option value="Treatment Enquiry">Treatment Enquiry</option>
-                                <option value="Pricing Question">Pricing Question</option>
-                                <option value="Aftercare Support">Aftercare Support</option>
-                                <option value="Existing Appointment">Existing Appointment</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
- 
-                        <div class="form-group">
-                            <label for="message">Message <span class="req">*</span></label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
- 
-                        <button type="submit" class="btn-submit">Send Message</button>
-                    </form>
-                </div>
- 
-                <!-- Contact Details -->
-                <aside class="contact-details">
-                    <h2>Other Ways to Reach Us</h2>
- 
-                    <div class="contact-detail-item">
-                        <p class="detail-label">Email</p>
-                        <a href="mailto:info@novusaesthetics.co.uk" class="detail-link">info@novusaesthetics.co.uk</a>
+                <!-- Video 1 -->
+                <article class="video-card" data-category="educational">
+                    <div class="video-frame" data-video="dQw4w9WgXcQ">
+                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="" loading="lazy" class="video-thumb-img">
+                        <button class="video-play" aria-label="Play video">
+                            <svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg"><path d="M66.5 7.7a8.6 8.6 0 0 0-6-6C55.3 0 34 0 34 0S12.7 0 7.5 1.7a8.6 8.6 0 0 0-6 6A90 90 0 0 0 0 24a90 90 0 0 0 1.5 16.3 8.6 8.6 0 0 0 6 6C12.7 48 34 48 34 48s21.3 0 26.5-1.7a8.6 8.6 0 0 0 6-6A90 90 0 0 0 68 24a90 90 0 0 0-1.5-16.3z" fill="#fff" opacity="0.9"/><path d="M27 34l18-10-18-10z" fill="#a98c6b"/></svg>
+                        </button>
                     </div>
- 
-                    <div class="contact-detail-item">
-                        <p class="detail-label">WhatsApp</p>
-                        <a href="https://wa.me/447742267151" target="_blank" rel="noopener" class="detail-link">Message us on WhatsApp</a>
+                    <div class="video-info">
+                        <span class="video-tag">Educational</span>
+                        <h3>Understanding Anti-Wrinkle Treatments</h3>
+                        <p>What to expect from your first anti-wrinkle appointment.</p>
                     </div>
+                </article>
  
-                    <div class="contact-detail-item">
-                        <p class="detail-label">Location</p>
-                        <p class="detail-text">Kennington, Ashford, Kent</p>
-                        <p class="detail-note">For client privacy and safety, our exact clinic address is provided upon booking confirmation.</p>
+                <!-- Video 2 -->
+                <article class="video-card" data-category="educational">
+                    <div class="video-frame" data-video="dQw4w9WgXcQ">
+                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="" loading="lazy" class="video-thumb-img">
+                        <button class="video-play" aria-label="Play video">
+                            <svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg"><path d="M66.5 7.7a8.6 8.6 0 0 0-6-6C55.3 0 34 0 34 0S12.7 0 7.5 1.7a8.6 8.6 0 0 0-6 6A90 90 0 0 0 0 24a90 90 0 0 0 1.5 16.3 8.6 8.6 0 0 0 6 6C12.7 48 34 48 34 48s21.3 0 26.5-1.7a8.6 8.6 0 0 0 6-6A90 90 0 0 0 68 24a90 90 0 0 0-1.5-16.3z" fill="#fff" opacity="0.9"/><path d="M27 34l18-10-18-10z" fill="#a98c6b"/></svg>
+                        </button>
                     </div>
+                    <div class="video-info">
+                        <span class="video-tag">Before &amp; After</span>
+                        <h3>Lip Enhancement Results</h3>
+                        <p>A natural-looking lip filler result, start to finish.</p>
+                    </div>
+                </article>
  
-                    <div class="contact-detail-item">
-                        <p class="detail-label">Follow Us</p>
-                        <div class="contact-socials">
-                            <a href="https://www.facebook.com/NovusAesthetics.uk" target="_blank" rel="noopener" aria-label="Novus Aesthetics on Facebook" class="social-icon social-icon-dark">
-                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M15 8.5H17V5.5H15C13.067 5.5 11.5 7.067 11.5 9V11H9.5V14H11.5V19H14.5V14H16.5L17 11H14.5V9.5C14.5 8.94772 14.9477 8.5 15.5 8.5H15Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
-                                </svg>
-                            </a>
-                            <a href="https://www.instagram.com/novusaesthetics.uk" target="_blank" rel="noopener" aria-label="Novus Aesthetics on Instagram" class="social-icon social-icon-dark">
-                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" stroke-width="1.4"/>
-                                    <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.4"/>
-                                    <circle cx="17.2" cy="6.8" r="1" fill="currentColor"/>
-                                </svg>
-                            </a>
-                        </div>
+                <!-- Video 3 -->
+                <article class="video-card" data-category="client-stories">
+                    <div class="video-frame" data-video="dQw4w9WgXcQ">
+                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="" loading="lazy" class="video-thumb-img">
+                        <button class="video-play" aria-label="Play video">
+                            <svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg"><path d="M66.5 7.7a8.6 8.6 0 0 0-6-6C55.3 0 34 0 34 0S12.7 0 7.5 1.7a8.6 8.6 0 0 0-6 6A90 90 0 0 0 0 24a90 90 0 0 0 1.5 16.3 8.6 8.6 0 0 0 6 6C12.7 48 34 48 34 48s21.3 0 26.5-1.7a8.6 8.6 0 0 0 6-6A90 90 0 0 0 68 24a90 90 0 0 0-1.5-16.3z" fill="#fff" opacity="0.9"/><path d="M27 34l18-10-18-10z" fill="#a98c6b"/></svg>
+                        </button>
                     </div>
-                </aside>
+                    <div class="video-info">
+                        <span class="video-tag">Client Stories</span>
+                        <h3>A Client's Experience</h3>
+                        <p>Hear about one client's journey with Novus Aesthetics.</p>
+                    </div>
+                </article>
  
             </div>
+ 
+            <div class="video-loadmore-wrap">
+                <button class="btn-loadmore" id="load-more">Load More</button>
+            </div>
+ 
+            <p class="video-empty" id="video-empty" hidden>No videos in this category yet — check back soon.</p>
+ 
+        </section>
+ 
+        <!-- ============================= -->
+        <!-- FINAL CTA BAND -->
+        <!-- ============================= -->
+        <section class="final-cta" aria-label="Book Consultation Call to Action">
+            <h2>Ready to Start Your Journey?</h2>
+            <p class="final-cta-sub">Book your consultation with Alana today.</p>
+            <a href="book.html" class="btn-primary-lg">Book Now</a>
         </section>
  
     </main>
@@ -254,15 +257,11 @@
         });
  
         menuClose.addEventListener('click', closeMenu);
- 
-        mobLinks.forEach(link => {
-            link.addEventListener('click', closeMenu);
-        });
+        mobLinks.forEach(link => link.addEventListener('click', closeMenu));
  
         // WhatsApp float dismiss
         const whatsappFloat = document.getElementById('whatsapp-float');
         const whatsappDismiss = document.getElementById('whatsapp-dismiss');
- 
         whatsappDismiss.addEventListener('click', () => {
             whatsappFloat.classList.add('hidden');
         });
@@ -327,6 +326,67 @@
                 updateZoom();
             }
         }
+ 
+        // ===== Video Gallery Logic =====
+        const VISIBLE_STEP = 4;
+        const grid = document.getElementById('video-grid');
+        const loadMoreBtn = document.getElementById('load-more');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const emptyMsg = document.getElementById('video-empty');
+        let currentFilter = 'all';
+        let visibleCount = VISIBLE_STEP;
+ 
+        function getMatching() {
+            const cards = Array.from(grid.querySelectorAll('.video-card'));
+            return cards.filter(c => currentFilter === 'all' || c.dataset.category === currentFilter);
+        }
+ 
+        function render() {
+            const all = Array.from(grid.querySelectorAll('.video-card'));
+            const matching = getMatching();
+ 
+            all.forEach(c => { c.style.display = 'none'; });
+            matching.forEach((c, i) => {
+                c.style.display = i < visibleCount ? '' : 'none';
+            });
+ 
+            // Empty state
+            emptyMsg.hidden = matching.length !== 0;
+ 
+            // Load more button visibility
+            loadMoreBtn.style.display = matching.length > visibleCount ? '' : 'none';
+        }
+ 
+        loadMoreBtn.addEventListener('click', () => {
+            visibleCount += VISIBLE_STEP;
+            render();
+        });
+ 
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentFilter = btn.dataset.filter;
+                visibleCount = VISIBLE_STEP;
+                render();
+            });
+        });
+ 
+        // Click-to-load YouTube embeds (keeps page fast)
+        grid.addEventListener('click', (e) => {
+            const frame = e.target.closest('.video-frame');
+            if (!frame || frame.querySelector('iframe')) return;
+            const id = frame.dataset.video;
+            const iframe = document.createElement('iframe');
+            iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0`;
+            iframe.title = 'Novus Aesthetics video';
+            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+            iframe.allowFullscreen = true;
+            frame.innerHTML = '';
+            frame.appendChild(iframe);
+        });
+ 
+        render();
     </script>
 </body>
 </html>
