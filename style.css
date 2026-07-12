@@ -1007,6 +1007,18 @@ img {
  
 /* Scroll-reveal for journey steps (animates only if user allows motion) */
 @media (prefers-reduced-motion: no-preference) {
+    /* Heading divider draws outward from centre (class added by JS) */
+    .section-heading h2.line-animate::after {
+        width: 0;
+        opacity: 0;
+        transition: width 0.7s ease, opacity 0.7s ease;
+    }
+ 
+    .section-heading h2.line-animate.line-in::after {
+        width: 56px;
+        opacity: 1;
+    }
+ 
     /* Site-wide section fade-in (class added by JS, reveals once) */
     .fade-section {
         opacity: 0;
