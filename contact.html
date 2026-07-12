@@ -305,6 +305,21 @@
                 h.classList.add('line-animate');
                 lineObserver.observe(h);
             });
+ 
+            // Subtle image zoom when scrolled into view
+            const zoomImgs = document.querySelectorAll('.about-image img, .video-thumb-img');
+            const zoomObserver = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('img-in');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.3 });
+            zoomImgs.forEach(img => {
+                img.classList.add('img-zoom');
+                zoomObserver.observe(img);
+            });
         }
     </script>
 </body>
