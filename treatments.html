@@ -321,6 +321,21 @@
                 section.classList.add('fade-section');
                 fadeObserver.observe(section);
             });
+ 
+            // Heading divider lines draw outward when scrolled into view
+            const lineHeads = document.querySelectorAll('.section-heading h2');
+            const lineObserver = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('line-in');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.4 });
+            lineHeads.forEach(h => {
+                h.classList.add('line-animate');
+                lineObserver.observe(h);
+            });
         }
  
         // Scroll-reveal for journey steps (replays on scroll up/down)
