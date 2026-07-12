@@ -266,6 +266,14 @@
         whatsappDismiss.addEventListener('click', () => {
             whatsappFloat.classList.add('hidden');
         });
+ 
+        // Frosted header on scroll
+        const siteHeader = document.querySelector('.site-header');
+        function updateHeaderFrost() {
+            siteHeader.classList.toggle('scrolled', window.scrollY > 40);
+        }
+        window.addEventListener('scroll', updateHeaderFrost, { passive: true });
+        updateHeaderFrost();
     </script>
 </body>
 </html>
