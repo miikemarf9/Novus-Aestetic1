@@ -89,6 +89,14 @@ img {
     z-index: 1000;
     background: var(--stone);
     border-bottom: 1px solid var(--border-soft);
+    transition: background 0.3s ease;
+}
+
+/* Frosted translucent state once scrolled */
+.site-header.scrolled {
+    background: rgba(250, 244, 242, 0.78);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 .nav-container {
