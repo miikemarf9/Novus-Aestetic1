@@ -504,11 +504,17 @@ img {
     align-items: center;
 }
  
+.about-image {
+    overflow: hidden;
+    border-radius: 8px;
+}
+ 
 .about-image img {
     border-radius: 8px;
     width: 100%;
     aspect-ratio: 4/5;
     object-fit: cover;
+    display: block;
 }
  
 .about-text h2 {
@@ -1007,6 +1013,16 @@ img {
  
 /* Scroll-reveal for journey steps (animates only if user allows motion) */
 @media (prefers-reduced-motion: no-preference) {
+    /* Subtle image zoom when scrolled into view (class added by JS) */
+    .img-zoom {
+        transform: scale(1);
+        transition: transform 0.8s ease;
+    }
+ 
+    .img-zoom.img-in {
+        transform: scale(1.06);
+    }
+ 
     /* Heading divider draws outward from centre (class added by JS) */
     .section-heading h2.line-animate::after {
         width: 0;
