@@ -1013,14 +1013,9 @@ img {
  
 /* Scroll-reveal for journey steps (animates only if user allows motion) */
 @media (prefers-reduced-motion: no-preference) {
-    /* Subtle image zoom when scrolled into view (class added by JS) */
+    /* Subtle scroll-linked image zoom (transform driven by JS) */
     .img-zoom {
-        transform: scale(1);
-        transition: transform 0.8s ease;
-    }
- 
-    .img-zoom.img-in {
-        transform: scale(1.06);
+        will-change: transform;
     }
  
     /* Heading divider draws outward from centre (class added by JS) */
