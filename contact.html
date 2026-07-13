@@ -270,7 +270,7 @@
         // Frosted header on scroll
         const siteHeader = document.querySelector('.site-header');
         function updateHeaderFrost() {
-            siteHeader.classList.toggle('scrolled', window.scrollY > 40);
+            siteHeader.classList.toggle('scrolled', window.scrollY > 60);
         }
         window.addEventListener('scroll', updateHeaderFrost, { passive: true });
         updateHeaderFrost();
